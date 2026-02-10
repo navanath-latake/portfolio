@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %}About - My Portfolio{% endblock %}
+
+{% block content %}
+<!-- About Hero -->
+<section style="padding: 4rem 2rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">About Me</h1>
+    <p style="text-align: center; font-size: 1.1rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 3rem;">
+
+
+        I’m a passionate Python developer with a strong interest in building clean, efficient, and scalable web
+        applications. I enjoy turning complex problems into simple, practical solutions through thoughtful backend logic
+        and well-structured code.
+    </p>
+</section>
+
+<!-- Main About Content -->
+<section class="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>Who Am I?</h2>
+            <p>
+                I’m a Python developer with 1+ year of hands-on experience working with Django and modern web
+                technologies. My journey began with curiosity about how web applications work, and it has grown into a
+                focused path toward backend development and real-world project building.
+            </p>
+            <p>
+                I specialize in Python, Django, Django REST Framework, HTML, and CSS, and I strongly believe in writing
+                clean code, continuous learning, and improving through real project experience. When I’m not coding, I
+                spend time exploring new technologies, improving my skills, and learning best practices from the
+                developer community.
+            </p>
+            <p>
+                My approach is simple: understand requirements clearly, build reliable solutions, and continuously
+                improve with every project I work on.
+            </p>
+        </div>
+        <div class="about-image">
+            👨‍💻
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section>
+    <h2 class="section-title">My Skills</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <!-- Frontend -->
+        <div
+            style="background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 0.75rem; border: 1px solid #334155;">
+            <h3 style="margin-bottom: 1.5rem;">Frontend</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+
+                <span class="skill-tag">JavaScript(Basic)</span>
+
+            </div>
+        </div>
+
+        <!-- Backend -->
+        <div
+            style="background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 0.75rem; border: 1px solid #334155;">
+            <h3 style="margin-bottom: 1.5rem;">Backend</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+            </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div
+            style="background: rgba(30, 41, 59, 0.5); padding: 2rem; border-radius: 0.75rem; border: 1px solid #334155;">
+            <h3 style="margin-bottom: 1.5rem;">Tools & Others</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">AWS(Basic)</span>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Experience Timeline -->
+<section>
+    <h2 class="section-title">Experience</h2>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+        <!-- Experience Item 1 -->
+        <div
+            style="display: flex; gap: 2rem; margin-bottom: 3rem; padding-left: 2rem; border-left: 2px solid #3b82f6; position: relative;">
+            <div
+                style="position: absolute; left: -10px; top: 0; width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 3px solid #0f172a;">
+            </div>
+            <div>
+                <h3>Junior Python Developer</h3>
+                <p style="color: #60a5fa; font-weight: 600; margin-bottom: 0.5rem;">Maxgen technologies PVT.Ltd • 2024 -
+                    Present</p>
+                <p>Worked on backend development using Python and Django, building and maintaining web applications and
+                    REST APIs. Assisted in database design, implemented core features, fixed bugs, and improved
+                    application performance through clean and reusable code.</p>
+            </div>
+        </div>
+</section>
+
+<div class="divider"></div>
+
+
+
+{% endblock %}

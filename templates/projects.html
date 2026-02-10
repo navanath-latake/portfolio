@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - My Portfolio{% endblock %}
+
+{% block content %}
+<!-- Projects Hero -->
+<section style="padding: 4rem 2rem; text-align: center;">
+  <h1 style="margin-bottom: 1rem;">My Projects</h1>
+  <p style="font-size: 1.1rem; color: #cbd5e1; max-width: 700px; margin: 0 auto;">
+    A showcase of my recent work and technical expertise. Each project demonstrates 
+    my commitment to quality, innovation, and user-centered design.
+  </p>
+</section>
+
+<!-- Filter Buttons -->
+<section style="padding: 2rem; text-align: center;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')" style="background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 9999px; cursor: pointer; font-weight: 600; transition: all 300ms;">All Projects</button>
+    <button class="filter-btn" data-filter="ecommerce" onclick="filterProjects('ecommerce')" style="background: transparent; color: #cbd5e1; border: 1px solid #334155; padding: 0.75rem 1.5rem; border-radius: 9999px; cursor: pointer; font-weight: 600; transition: all 300ms;">E-Commerce</button>
+    <button class="filter-btn" data-filter="website" onclick="filterProjects('website')" style="background: transparent; color: #cbd5e1; border: 1px solid #334155; padding: 0.75rem 1.5rem; border-radius: 9999px; cursor: pointer; font-weight: 600; transition: all 300ms;">Websites</button>
+    <button class="filter-btn" data-filter="tools" onclick="filterProjects('tools')" style="background: transparent; color: #cbd5e1; border: 1px solid #334155; padding: 0.75rem 1.5rem; border-radius: 9999px; cursor: pointer; font-weight: 600; transition: all 300ms;">Tools</button>
+    <button class="filter-btn" data-filter="management" onclick="filterProjects('management')" style="background: transparent; color: #cbd5e1; border: 1px solid #334155; padding: 0.75rem 1.5rem; border-radius: 9999px; cursor: pointer; font-weight: 600; transition: all 300ms;">Management</button>
+  </div>
+</section>
+
+<!-- Projects Grid -->
+<section style="padding: 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;" id="projectsGrid">
+    
+    <!-- Project 1: Furniture Store E-Commerce -->
+    <div class="project-item" data-category="ecommerce" style="background: rgba(30, 41, 59, 0.5); border-radius: 1rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 220px; background: linear-gradient(135deg, #8b6f47 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden;">
+        🛋️
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139, 111, 71, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 2rem;">
+        <h3 style="margin-bottom: 0.75rem;">Furniture Store E-Commerce</h3>
+        <p style="color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.6;">Complete online furniture marketplace with comprehensive product catalog featuring detailed descriptions and high-resolution images, integrated shopping cart, secure payment gateway via Stripe, real-time order tracking, and robust admin panel for inventory management.</p>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Key Features:</p>
+          <ul style="list-style: none; padding: 0; color: #cbd5e1; font-size: 0.9rem;">
+            <li>✓ Product filtering & search</li>
+            <li>✓ Secure payment processing</li>
+            <li>✓ Inventory management</li>
+            <li>✓ Order tracking</li>
+            <li>✓ Admin dashboard</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Tech Stack:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Django</span>
+            <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Stripe API</span>
+            <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">PostgreSQL</span>
+            <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Bootstrap</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <a href="#" style="flex: 1; background: linear-gradient(135deg, #8b6f47 0%, #a8845c 100%); color: white; text-align: center; padding: 0.75rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 300ms;">Live Demo</a>
+          <a href="#" style="flex: 1; background: transparent; color: #d4a574; text-align: center; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #8b6f47; font-weight: 600; text-decoration: none; transition: all 300ms;">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Coffee Shop Website -->
+    <div class="project-item" data-category="website" style="background: rgba(30, 41, 59, 0.5); border-radius: 1rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 220px; background: linear-gradient(135deg, #6b4423 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden;">
+        ☕
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(107, 68, 35, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 2rem;">
+        <h3 style="margin-bottom: 0.75rem;">Coffee Shop Website</h3>
+        <p style="color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.6;">Modern and elegant coffee shop website showcasing the brand with a beautiful design. Features include online menu with detailed descriptions, table reservation system, location finder with embedded maps, photo gallery, customer reviews and ratings, and online ordering capabilities.</p>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Key Features:</p>
+          <ul style="list-style: none; padding: 0; color: #cbd5e1; font-size: 0.9rem;">
+            <li>✓ Online menu system</li>
+            <li>✓ Table reservations</li>
+            <li>✓ Location & maps</li>
+            <li>✓ Photo gallery</li>
+            <li>✓ Customer reviews</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Tech Stack:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Django</span>
+            <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Bootstrap</span>
+            <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">MySQL</span>
+            <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Google Maps API</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <a href="#" style="flex: 1; background: linear-gradient(135deg, #6b4423 0%, #8a5a3a 100%); color: white; text-align: center; padding: 0.75rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 300ms;">Live Demo</a>
+          <a href="#" style="flex: 1; background: transparent; color: #c99a6e; text-align: center; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #6b4423; font-weight: 600; text-decoration: none; transition: all 300ms;">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: OCR Text Extractor -->
+    <div class="project-item" data-category="tools" style="background: rgba(30, 41, 59, 0.5); border-radius: 1rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 220px; background: linear-gradient(135deg, #06b6d4 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden;">
+        📄
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 2rem;">
+        <h3 style="margin-bottom: 0.75rem;">OCR Text Extractor</h3>
+        <p style="color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.6;">Advanced Optical Character Recognition tool that accurately extracts text from images and PDF documents. Supports multiple languages with high accuracy, batch processing capabilities, document validation, and formatted text export options.</p>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Key Features:</p>
+          <ul style="list-style: none; padding: 0; color: #cbd5e1; font-size: 0.9rem;">
+            <li>✓ Multi-language support</li>
+            <li>✓ Batch processing</li>
+            <li>✓ PDF & image support</li>
+            <li>✓ High accuracy recognition</li>
+            <li>✓ Export to multiple formats</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Tech Stack:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Python</span>
+            <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Tesseract OCR</span>
+            <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Flask</span>
+            <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">OpenCV</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <a href="#" style="flex: 1; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; text-align: center; padding: 0.75rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 300ms;">Live Demo</a>
+          <a href="#" style="flex: 1; background: transparent; color: #22d3ee; text-align: center; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #06b6d4; font-weight: 600; text-decoration: none; transition: all 300ms;">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: Employee Management System -->
+    <div class="project-item" data-category="management" style="background: rgba(30, 41, 59, 0.5); border-radius: 1rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 220px; background: linear-gradient(135deg, #8b5cf6 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden;">
+        👥
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 2rem;">
+        <h3 style="margin-bottom: 0.75rem;">Employee Management System</h3>
+        <p style="color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.6;">Comprehensive HR management platform designed to streamline all employee-related operations. Features include detailed employee profiles, attendance and leave tracking, payroll management, performance review system, automated notifications, and comprehensive reporting and analytics.</p>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Key Features:</p>
+          <ul style="list-style: none; padding: 0; color: #cbd5e1; font-size: 0.9rem;">
+            <li>✓ Employee profiles</li>
+            <li>✓ Attendance tracking</li>
+            <li>✓ Payroll management</li>
+            <li>✓ Leave requests</li>
+            <li>✓ Performance reviews</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 0.75rem; font-size: 0.9rem;">Tech Stack:</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Django</span>
+            <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">React</span>
+            <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">PostgreSQL</span>
+            <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Celery</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <a href="#" style="flex: 1; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; text-align: center; padding: 0.75rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 300ms;">Live Demo</a>
+          <a href="#" style="flex: 1; background: transparent; color: #a78bfa; text-align: center; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #8b5cf6; font-weight: 600; text-decoration: none; transition: all 300ms;">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section style="text-align: center; padding: 4rem 2rem; background: rgba(30, 41, 59, 0.5); border-radius: 1rem; margin: 4rem auto; max-width: 900px; display: block;">
+  <h2 style="margin-bottom: 1.5rem;">Interested in working together?</h2>
+  <p style="color: #cbd5e1; margin-bottom: 2rem; font-size: 1.1rem;">Let's discuss how I can help bring your ideas to life.</p>
+  <div style="display: flex; justify-content: center;">
+    <a href="{% url 'contact' %}" class="cta-button" style="display: inline-block;">Start a Project</a>
+  </div>
+</section>
+
+<script>
+  function filterProjects(category) {
+    const items = document.querySelectorAll('.project-item');
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // Update active button
+    buttons.forEach(btn => {
+      btn.style.background = btn.dataset.filter === category ? 
+        'linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)' : 'transparent';
+      btn.style.color = btn.dataset.filter === category ? 'white' : '#cbd5e1';
+      btn.style.border = btn.dataset.filter === category ? 'none' : '1px solid #334155';
+    });
+    
+    // Filter items
+    items.forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.style.display = 'block';
+        item.style.animation = 'fadeIn 0.3s ease';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+  
+  // Add hover effect
+  document.querySelectorAll('.project-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-8px)';
+      this.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.2)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = 'none';
+    });
+  });
+</script>
+
+{% endblock %}

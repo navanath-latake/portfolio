@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Hi, I'm <span style="color: #60a5fa;">Navanath N Latake</span></h1>
+    <p class="hero-subtitle">Junior Python Developer</p>
+    <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem;">
+      I build beautiful, functional websites and applications that solve real problems. 
+      Let's create something amazing together.
+    </p>
+    <a href="{% url 'contact' %}" class="cta-button">Get In Touch</a>
+  </div>
+</section>
+
+<!-- Quick Stats Section -->
+<section style="background: rgba(30, 41, 59, 0.5); border-radius: 1rem; padding: 3rem 2rem; margin: 4rem auto; max-width: 1200px; display: block; text-align: center;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center;">
+      <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">1+</div>
+      <p style="color: #cbd5e1; margin-top: 0.5rem;">Years Experience</p>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">4+</div>
+      <p style="color: #cbd5e1; margin-top: 0.5rem;">Projects Completed</p>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">2+</div>
+      <p style="color: #cbd5e1; margin-top: 0.5rem;">Happy Clients</p>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects -->
+<section>
+  <h2 class="section-title">Featured Projects</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+    
+    <!-- Project Card 1: Furniture Store -->
+    <div class="project-card" style="background: rgba(30, 41, 59, 0.5); border-radius: 0.75rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 200px; background: linear-gradient(135deg, #8b6f47 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden;">
+        🛋️
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139, 111, 71, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <h3 style="margin-bottom: 0.5rem;">Furniture Store E-Commerce</h3>
+        <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 1rem;">Full-featured online furniture marketplace with product catalog, shopping cart, payment integration, order tracking, and admin inventory management.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Django</span>
+          <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Stripe</span>
+          <span style="background: rgba(139, 111, 71, 0.2); color: #d4a574; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">PostgreSQL</span>
+        </div>
+        <a href="{% url 'projects' %}" style="color: #d4a574; font-weight: 600; transition: all 300ms;" onmouseover="this.style.color='#c29956'" onmouseout="this.style.color='#d4a574'">View Details →</a>
+      </div>
+    </div>
+
+    <!-- Project Card 2: Coffee Shop -->
+    <div class="project-card" style="background: rgba(30, 41, 59, 0.5); border-radius: 0.75rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 200px; background: linear-gradient(135deg, #6b4423 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden;">
+        ☕
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(107, 68, 35, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <h3 style="margin-bottom: 0.5rem;">Coffee Shop Website</h3>
+        <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 1rem;">Modern coffee shop website with online menu, reservation system, location finder, photo gallery, customer reviews, and online ordering.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Django</span>
+          <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Bootstrap</span>
+          <span style="background: rgba(107, 68, 35, 0.2); color: #c99a6e; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">MySQL</span>
+        </div>
+        <a href="{% url 'projects' %}" style="color: #c99a6e; font-weight: 600; transition: all 300ms;" onmouseover="this.style.color='#b8845f'" onmouseout="this.style.color='#c99a6e'">View Details →</a>
+      </div>
+    </div>
+
+    <!-- Project Card 3: OCR Text Extractor -->
+    <div class="project-card" style="background: rgba(30, 41, 59, 0.5); border-radius: 0.75rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 200px; background: linear-gradient(135deg, #06b6d4 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden;">
+        📄
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <h3 style="margin-bottom: 0.5rem;">OCR Text Extractor</h3>
+        <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 1rem;">Advanced Optical Character Recognition tool that extracts text from images and PDFs with high accuracy, supports multiple languages, and batch processing.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Python</span>
+          <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Tesseract OCR</span>
+          <span style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Flask</span>
+        </div>
+        <a href="{% url 'projects' %}" style="color: #22d3ee; font-weight: 600; transition: all 300ms;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#22d3ee'">View Details →</a>
+      </div>
+    </div>
+
+    <!-- Project Card 4: Employee Management System -->
+    <div class="project-card" style="background: rgba(30, 41, 59, 0.5); border-radius: 0.75rem; overflow: hidden; border: 1px solid #334155; transition: all 300ms ease;">
+      <div style="height: 200px; background: linear-gradient(135deg, #8b5cf6 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden;">
+        👥
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, transparent 100%);"></div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <h3 style="margin-bottom: 0.5rem;">Employee Management System</h3>
+        <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 1rem;">Comprehensive HR management platform with employee profiles, attendance tracking, payroll management, leave requests, performance reviews, and reporting.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">Django</span>
+          <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">React</span>
+          <span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.85rem;">PostgreSQL</span>
+        </div>
+        <a href="{% url 'projects' %}" style="color: #a78bfa; font-weight: 600; transition: all 300ms;" onmouseover="this.style.color='#8b5cf6'" onmouseout="this.style.color='#a78bfa'">View Details →</a>
+      </div>
+    </div>
+
+  </div>
+  
+  <div style="text-align: center; margin-top: 3rem;">
+    <a href="{% url 'projects' %}" class="cta-button" style="display: inline-block;">View All Projects</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA Section -->
+<section style="text-align: center; padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+  <h2>Ready to start your next project?</h2>
+  <div style="display: flex; justify-content: center;">
+    <a href="{% url 'contact' %}" class="cta-button" style="display: inline-block;">Let's Work Together</a>
+  </div>
+</section>
+
+{% endblock %}
